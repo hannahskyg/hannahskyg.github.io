@@ -169,16 +169,29 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* 🌿 Profile Photo */
-      .profile-photo {
-    width: 150px;          /* controls how big it is */
-    height: 150px;         /* keep width & height same for circle */
-    border-radius: 50%;    /* makes it circular */
-    object-fit: cover;     /* crops if photo isn’t perfectly square */
-    display: block;
-    margin: 20px auto;     /* centers it horizontally */
-    border: 3px solid #9caf88; /* optional: sage green border */
-  }
+   /* 🌿 About Section Layout */
+.about-container {
+  display: flex;
+  align-items: center; /* vertically aligns text to middle of photo */
+  gap: 20px;           /* space between photo and text */
+  flex-wrap: wrap;      /* wraps on small screens */
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #9caf88;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin: 0; /* remove auto centering since we're using flex */
+}
+
+.about-text {
+  flex: 1;         /* text takes up remaining space */
+  min-width: 200px; /* ensures it doesn’t get too squished on mobile */
+}
+
 
   </style>
 </head>
@@ -203,10 +216,15 @@
   <!-- 🌿 About -->
 <section id="about" class="fade-in">
   <h2>About Me</h2>
-  <img src="images/pfp_hannah.jpg" alt="Hannah Gonzalez" class="profile-photo">
-  <p>Hi, I’m Hannah! I’m a Data Science & International Business student at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context.</p>
-  <p>Outside of academics, I love traveling, mentoring, and capturing moments through photos.</p>
+  <div class="about-container">
+    <img src="images/pfp_hannah.jpg" alt="Hannah Gonzalez" class="profile-photo">
+    <div class="about-text">
+      <p>Hi, I’m Hannah! I’m a Data Science & International Business student at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context.</p>
+      <p>Outside of academics, I love traveling, mentoring, and capturing moments through photos.</p>
+    </div>
+  </div>
 </section>
+
 
 
   <!-- 🌿 Resume -->
