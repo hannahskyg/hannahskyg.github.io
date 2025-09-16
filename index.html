@@ -161,62 +161,25 @@
       transform: scale(1.05);
     }
 
-/* Footer container as flex for proper alignment */
-footer p {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 0;
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f1f5f4;
+  color: #333;
 }
 
-/* Footer links & dropdown styling */
-footer a, .email-dropdown {
+footer a {
+  margin: 0 10px;
   font-weight: 500;
   color: #607d8b;
   text-decoration: none;
-  position: relative; /* needed for dropdown positioning */
-  cursor: pointer;
   transition: color 0.3s;
 }
 
-footer a:hover, .email-dropdown:hover {
+footer a:hover {
   color: #9caf88;
 }
 
-/* Dropdown container */
-.email-dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 110%; /* slightly below Email link */
-  left: 50%;
-  transform: translateX(-50%); /* center under Email */
-  background: #f1f5f4;
-  padding: 5px 0;
-  min-width: 180px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
-}
-
-/* Dropdown links */
-.email-dropdown .dropdown-content a {
-  display: block;
-  padding: 8px 15px;
-  color: #607d8b;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.email-dropdown .dropdown-content a:hover {
-  background: #9caf88;
-  color: #fff;
-}
-
-/* Show dropdown on hover */
-.email-dropdown:hover .dropdown-content {
-  display: block;
-}
 
 
     /* 🌿 Animations */
@@ -333,17 +296,15 @@ footer a:hover, .email-dropdown:hover {
   <h2>Contact Me</h2>
   <p>Let’s connect!</p>
   <p>
-    <span class="email-dropdown">
-      Email
-      <span class="dropdown-content">
-        <a href="mailto:hagonzalez@ucsd.edu">Default Mail Client</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hagonzalez@ucsd.edu" target="_blank">Gmail</a>
-      </span>
-    </span> |
+    <!-- Email (mailto for mobile & default mail client) -->
+    <a href="mailto:hagonzalez@ucsd.edu">Email</a> | 
+    <!-- Optional Gmail fallback -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hagonzalez@ucsd.edu" target="_blank" title="Open in Gmail">Gmail</a> | 
     <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">LinkedIn</a> | 
     <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
   </p>
 </footer>
+
 
 
 
