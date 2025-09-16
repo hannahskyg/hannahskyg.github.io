@@ -161,13 +161,26 @@
       transform: scale(1.05);
     }
 
-    /* 🌿 Contact */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #f1f5f4;
-      color: #333;
-    }
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f1f5f4;
+  color: #333;
+}
+
+footer a {
+  margin: 0 10px;
+  font-weight: 500;
+  color: #607d8b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #9caf88;
+}
+
+
 
     footer a {
       margin: 0 10px;
@@ -283,16 +296,20 @@
     </div>
   </section>
 
-  <!-- 🌿 Contact -->
-  <footer id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <p>Let’s connect!</p>
-    <p>
-      <a href="mailto:hagonzalez@ucsd.edu">Email</a> | 
-      <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
-    </p>
-  </footer>
+<!-- 🌿 Contact -->
+<footer id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <p>Let’s connect!</p>
+  <p>
+    <!-- Email (mailto for mobile & default mail client) -->
+    <a href="mailto:hagonzalez@ucsd.edu">Email</a> | 
+    <!-- Optional Gmail fallback -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hagonzalez@ucsd.edu" target="_blank" title="Open in Gmail">Gmail</a> | 
+    <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">LinkedIn</a> | 
+    <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
+  </p>
+</footer>
+
 
   <!-- 🌿 JS for animations -->
   <script>
