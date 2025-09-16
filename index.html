@@ -161,13 +161,21 @@
       transform: scale(1.05);
     }
 
-/* Footer Links */
+/* Footer container as flex for proper alignment */
+footer p {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* Footer links & dropdown styling */
 footer a, .email-dropdown {
-  margin: 0 10px;
   font-weight: 500;
   color: #607d8b;
   text-decoration: none;
-  position: relative;
+  position: relative; /* needed for dropdown positioning */
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -176,12 +184,13 @@ footer a:hover, .email-dropdown:hover {
   color: #9caf88;
 }
 
-/* Dropdown Container */
+/* Dropdown container */
 .email-dropdown .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* directly below "Email" */
-  left: 0;
+  top: 110%; /* slightly below Email link */
+  left: 50%;
+  transform: translateX(-50%); /* center under Email */
   background: #f1f5f4;
   padding: 5px 0;
   min-width: 180px;
@@ -190,7 +199,7 @@ footer a:hover, .email-dropdown:hover {
   z-index: 1000;
 }
 
-/* Dropdown Links */
+/* Dropdown links */
 .email-dropdown .dropdown-content a {
   display: block;
   padding: 8px 15px;
@@ -209,11 +218,6 @@ footer a:hover, .email-dropdown:hover {
   display: block;
 }
 
-
-    footer a {
-      margin: 0 10px;
-      font-weight: 500;
-    }
 
     /* 🌿 Animations */
     .fade-in {
