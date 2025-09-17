@@ -146,7 +146,15 @@
       cursor: pointer;
     }
 
-    .flip-card:hover .flip-card-inner {
+    /* Desktop hover behavior */
+    @media (hover: hover) and (pointer: fine) {
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    /* Mobile click behavior - added via JavaScript */
+    .flip-card-inner.flipped {
       transform: rotateY(180deg);
     }
 
@@ -200,6 +208,33 @@
       align-items: center;
       justify-content: center;
       gap: 5px;
+    }
+
+    /* Update hint text for mobile */
+    @media (max-width: 768px) {
+      .flip-card-front .hover-hint {
+        display: none;
+      }
+      
+      .flip-card-front .tap-hint {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+    }
+
+    .flip-card-front .tap-hint {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .flip-card-front .tap-hint {
+        display: flex;
+      }
     }
 
     /* 🌿 Back Card Styles */
@@ -447,6 +482,10 @@
               <i class="fas fa-mouse-pointer"></i>
               Hover to see details
             </div>
+            <div class="tap-hint">
+              <i class="fas fa-hand-pointer"></i>
+              Tap to see details
+            </div>
           </div>
           <div class="flip-card-back">
             <h3>
@@ -475,6 +514,10 @@
               <i class="fas fa-mouse-pointer"></i>
               Hover to see details
             </div>
+            <div class="tap-hint">
+              <i class="fas fa-hand-pointer"></i>
+              Tap to see details
+            </div>
           </div>
           <div class="flip-card-back">
             <h3>
@@ -502,6 +545,10 @@
             <div class="hover-hint">
               <i class="fas fa-mouse-pointer"></i>
               Hover to see details
+            </div>
+            <div class="tap-hint">
+              <i class="fas fa-hand-pointer"></i>
+              Tap to see details
             </div>
           </div>
           <div class="flip-card-back">
@@ -566,8 +613,9 @@
     </p>
   </footer>
 
-  <!-- 🌿 JS for animations -->
+  <!-- 🌿 JS for animations and mobile flip functionality -->
   <script>
+    // Fade-in animations
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
       threshold: 0.2,
@@ -582,6 +630,51 @@
 
     faders.forEach(fader => {
       appearOnScroll.observe(fader);
+    });
+
+    // Mobile flip card functionality
+    function isMobileDevice() {
+      return window.innerWidth <= 768 || ('ontouchstart' in window);
+    }
+
+    function handleCardClick(event) {
+      // Only handle clicks on mobile
+      if (!isMobileDevice()) return;
+      
+      const card = event.currentTarget;
+      const cardInner = card.querySelector('.flip-card-inner');
+      
+      // Prevent event from bubbling up
+      event.stopPropagation();
+      
+      // Toggle the flipped state
+      cardInner.classList.toggle('flipped');
+    }
+
+    // Add click listeners to all flip cards
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', handleCardClick);
+      card.addEventListener('touchstart', handleCardClick, { passive: true });
+    });
+
+    // Close flipped cards when clicking outside (mobile only)
+    document.addEventListener('click', function(event) {
+      if (!isMobileDevice()) return;
+      
+      // If the click is not on a flip card, close all flipped cards
+      if (!event.target.closest('.flip-card')) {
+        document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
+          cardInner.classList.remove('flipped');
+        });
+      }
+    });
+
+    // Handle orientation changes
+    window.addEventListener('resize', function() {
+      // Reset all flipped states when switching between desktop/mobile
+      document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
+        cardInner.classList.remove('flipped');
+      });
     });
   </script>
 
