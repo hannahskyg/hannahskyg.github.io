@@ -7,6 +7,7 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     /* 🌿 General Styles */
@@ -127,10 +128,11 @@
         }
       
           .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-      }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;   /* centers project cards horizontally */
+    }
 
         
         .project-card {
@@ -289,7 +291,13 @@ footer a:hover {
         <div class="projects-grid">
           <div class="project-card">
             <a href="https://github.com/hannahskyg/league_of_legends_analysis" target="_blank" style="text-decoration: none; color: inherit;">
-              <h3>League of Legends Analysis</h3>
+              <h3>
+                  League of Legends Analysis 
+                  <a href="https://github.com/hannahskyg/league_of_legends_analysis" target="_blank">
+                    <i class="fab fa-github" style="margin-left: 8px; color: #333;"></i>
+                  </a>
+                </h3>
+
               <p><strong>Python</strong>, <strong>HTML</strong>, <strong>Pandas</strong>, <strong>Plotly</strong>, <strong>Scikit-learn</strong></p>
               <ul>
                 <li>Predicted player positions with 77.3% accuracy by performing exploratory data analysis...</li>
