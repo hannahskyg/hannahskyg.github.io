@@ -106,44 +106,163 @@
       background: #9caf88;
     }
 
-/* 🌿 Resume Thumbnail */
-.resume-preview {
-  width: 300px;           /* bigger size for emphasis */
-  max-width: 100%;        /* responsive on small screens */
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25); /* slightly stronger shadow */
-  transition: transform 0.3s;
-  display: block;
-  margin: 20px auto;      /* centers thumbnail */
-}
+    /* 🌿 Resume Thumbnail */
+    .resume-preview {
+      width: 300px;           
+      max-width: 100%;        
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25); 
+      transition: transform 0.3s;
+      display: block;
+      margin: 20px auto;      
+    }
 
-.resume-preview:hover {
-  transform: scale(1.08); /* subtle zoom for cinematic effect */
-}
+    .resume-preview:hover {
+      transform: scale(1.08); 
+    }
 
+    /* 🌿 Updated Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
 
+    /* 🌿 Flip Card Container */
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      height: 280px;
+      perspective: 1000px;
+    }
 
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
 
-    
-   /* 🌿 Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
 
-.project-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 25px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
+    .flip-card-front {
+      background: linear-gradient(135deg, #9caf88 0%, #a8c09a 100%);
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .flip-card-back {
+      background: #ffffff;
+      color: #333;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+    }
+
+    /* 🌿 Front Card Styles */
+    .flip-card-front h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .flip-card-front .tech-stack {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .flip-card-front .hover-hint {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    /* 🌿 Back Card Styles */
+    .flip-card-back h3 {
+      margin-bottom: 15px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .flip-card-back .github-link {
+      color: #607d8b;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .flip-card-back .github-link:hover {
+      color: #9caf88;
+    }
+
+    .flip-card-back ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .flip-card-back li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .flip-card-back .tech-list {
+      font-weight: 600;
+      color: #607d8b;
+      margin-bottom: 15px;
+    }
+
+    /* 🌿 Sage Green and Baby Blue gradient themes for each card */
+    .card-1 .flip-card-front {
+      background: linear-gradient(135deg, #9caf88 0%, #a8c09a 100%); /* Sage Green */
+    }
+
+    .card-2 .flip-card-front {
+      background: linear-gradient(135deg, #87ceeb 0%, #98d4f0 100%); /* Baby Blue */
+    }
+
+    .card-3 .flip-card-front {
+      background: linear-gradient(135deg, #b8d4a5 0%, #9caf88 100%); /* Light Sage */
+    }
+
+    /* 🌿 Coming Soon Card */
+    .coming-soon {
+      opacity: 0.7;
+    }
+
+    .coming-soon .flip-card-front {
+      background: linear-gradient(135deg, #c8d6c1 0%, #a8b9a0 100%);
+    }
+
+    .coming-soon:hover .flip-card-inner {
+      transform: none;
+    }
 
     /* 🌿 Hobbies */
     .hobbies-grid {
@@ -164,26 +283,24 @@
       transform: scale(1.05);
     }
 
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #f1f5f4;
-  color: #333;
-}
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f1f5f4;
+      color: #333;
+    }
 
-footer a {
-  margin: 0 10px;
-  font-weight: 500;
-  color: #607d8b;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    footer a {
+      margin: 0 10px;
+      font-weight: 500;
+      color: #607d8b;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-footer a:hover {
-  color: #9caf88;
-}
-
-
+    footer a:hover {
+      color: #9caf88;
+    }
 
     /* 🌿 Animations */
     .fade-in {
@@ -196,45 +313,56 @@ footer a:hover {
       opacity: 1;
       transform: translateY(0);
     }
-   /* 🌿 About Section Layout */
-.about-container {
-  display: flex;
-  align-items: center; /* vertically aligns text to middle of photo */
-  gap: 20px;           /* space between photo and text */
-  flex-wrap: wrap;      /* wraps on small screens */
-}
 
-/* Hover animation for profile photo */
-.profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top center;
-  border: 3px solid #9caf88;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin: 0;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    /* 🌿 About Section Layout */
+    .about-container {
+      display: flex;
+      align-items: center; 
+      gap: 20px;           
+      flex-wrap: wrap;      
+    }
 
-.profile-photo:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  cursor: pointer;
-}
+    /* Hover animation for profile photo */
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid #9caf88;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin: 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
+    .profile-photo:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
 
-.about-text {
-  flex: 1;         /* text takes up remaining space */
-  min-width: 200px; /* ensures it doesn’t get too squished on mobile */
-}
+    .about-text {
+      flex: 1;         
+      min-width: 200px; 
+    }
 
-
+    /* 🌿 Mobile Responsiveness for Flip Cards */
+    @media (max-width: 768px) {
+      .flip-card {
+        height: 250px;
+      }
+      
+      .flip-card-front h3 {
+        font-size: 1.2rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
   </style>
 </head>
-  <!--                                                                                                  -->
-
-
   
 <body>
 
@@ -253,67 +381,100 @@ footer a:hover {
     <p>Exploring the world through data and global business</p>
   </header>
 
-  
   <!-- 🌿 About -->
-<section id="about" class="fade-in">
-  <h2>About Me</h2>
-<div class="about-container">
-  <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">
-    <img src="images/pfp_hannah.jpg" alt="Hannah Gonzalez" class="profile-photo">
-  </a>
-  <div class="about-text">
-    <p>Hi, I’m Hannah Sky Gonzalez! I’m a third-year Data Science & International Business double major at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context. Academically, my coursework focuses on data science, business principles, and accounting. In data science, I have learned how to draw meaningful conclusions through computation, data analysis, data visualization, and data modeling. In business, I have developed essential skills to be an effective team member and future business leader. My accounting courses have taught me how to understand and interpret financial statements. Outside of academics, I am a member of three organizations: Data Science Society, Women in Business, and Women in Computing. I have also held mentorship roles, supporting students who are in similar situations to those I have experienced, which I find highly rewarding.</p>
-    <p>Outside of academics, I love traveling, enjoying matcha, and working out! I’ve been to over 15 countries, always try the newest café in town, and am on a mission to complete a pull-up!</p>
-  </div>
-</div>
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">
+        <img src="images/pfp_hannah.jpg" alt="Hannah Gonzalez" class="profile-photo">
+      </a>
+      <div class="about-text">
+        <p>Hi, I'm Hannah Sky Gonzalez! I'm a third-year Data Science & International Business double major at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context. Academically, my coursework focuses on data science, business principles, and accounting. In data science, I have learned how to draw meaningful conclusions through computation, data analysis, data visualization, and data modeling. In business, I have developed essential skills to be an effective team member and future business leader. My accounting courses have taught me how to understand and interpret financial statements. Outside of academics, I am a member of three organizations: Data Science Society, Women in Business, and Women in Computing. I have also held mentorship roles, supporting students who are in similar situations to those I have experienced, which I find highly rewarding.</p>
+        <p>Outside of academics, I love traveling, enjoying matcha, and working out! I've been to over 15 countries, always try the newest café in town, and am on a mission to complete a pull-up!</p>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- 🌿 Resume -->
+  <section id="resume" class="resume fade-in">
+    <h2>Resume</h2>
+    <p>Click the image to preview my resume:</p>
+    <a href="Hannah_Sky_Gonzalez_Resume_2025.pdf" target="_blank">
+      <img src="images/resume_preview.png" alt="Resume Preview" class="resume-preview">
+    </a>
+  </section>
 
-
-<!-- 🌿 Resume -->
-<section id="resume" class="resume fade-in">
-  <h2>Resume</h2>
-  <p>Click the image to preview my resume:</p>
-  <a href="Hannah_Sky_Gonzalez_Resume_2025.pdf" target="_blank">
-    <img src="images/resume_preview.png" alt="Resume Preview" class="resume-preview">
-  </a>
-</section>
-
-<!-- 🌿 Projects -->
-      <section id="projects" class="projects fade-in">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <a href="https://github.com/hannahskyg/league_of_legends_analysis" target="_blank" style="text-decoration: none; color: inherit;">
-              <h3>
-                  League of Legends Analysis 
-                  <a href="https://github.com/hannahskyg/league_of_legends_analysis" target="_blank">
-                    <i class="fab fa-github" style="margin-left: 8px; color: #333;"></i>
-                  </a>
-                </h3>
-
-              <p><strong>Python</strong>, <strong>HTML</strong>, <strong>Pandas</strong>, <strong>Plotly</strong>, <strong>Scikit-learn</strong></p>
-              <ul>
-                <li>Predicted player positions with 77.3% accuracy by performing exploratory data analysis on 19,692 rows and 161 columns from 2025 competitive League of Legends matches, identifying key features such as kills, deaths, DPM, and monster/minion kills.</li>
-                <li>Ensured unbiased model performance by conducting hypothesis testing and fairness analysis across low- and high-kill groups (p-value = 0.056), validating parity in position prediction</li>
-                <li>Improved predictive accuracy by 4% over baseline by engineering combined metrics (e.g., total kills, objective contributions) and scaling features, translating complex gameplay data into actionable insights for competitive strategy analysis.</li>
-              </ul>
-            </a>
-          </div>
+  <!-- 🌿 Projects with Flip Cards -->
+  <section id="projects" class="projects fade-in">
+    <h2>Projects</h2>
+    <div class="projects-grid">
       
-          <div class="project-card">
-            <h3>Project Two</h3>
-            <p>Description of another project...</p>
+      <!-- Project 1: League of Legends Analysis -->
+      <div class="flip-card card-1">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>League of Legends Analysis</h3>
+            <div class="tech-stack">Python • Pandas • Scikit-learn • Plotly</div>
+            <div class="hover-hint">
+              <i class="fas fa-mouse-pointer"></i>
+              Hover to see details
+            </div>
           </div>
-      
-          <div class="project-card">
-            <h3>Project Three</h3>
-            <p>Description of another project...</p>
+          <div class="flip-card-back">
+            <h3>
+              League of Legends Analysis
+              <a href="https://github.com/hannahskyg/league_of_legends_analysis" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <div class="tech-list">Python • HTML • Pandas • Plotly • Scikit-learn</div>
+            <ul>
+              <li>Predicted player positions with <strong>77.3% accuracy</strong> by performing exploratory data analysis on 19,692 rows and 161 columns from 2025 competitive League of Legends matches</li>
+              <li>Ensured unbiased model performance by conducting hypothesis testing and fairness analysis across low- and high-kill groups (p-value = 0.056)</li>
+              <li>Improved predictive accuracy by <strong>4% over baseline</strong> by engineering combined metrics and scaling features, translating complex gameplay data into actionable insights</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
 
+      <!-- Project 2: Coming Soon -->
+      <div class="flip-card card-2 coming-soon">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Project Two</h3>
+            <div class="tech-stack">Coming Soon...</div>
+            <div class="hover-hint">
+              <i class="fas fa-code"></i>
+              In Development
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h3>Exciting Project Coming Soon!</h3>
+            <p>I'm currently working on something amazing. Check back soon for updates!</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Project 3: Coming Soon -->
+      <div class="flip-card card-3 coming-soon">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Project Three</h3>
+            <div class="tech-stack">Coming Soon...</div>
+            <div class="hover-hint">
+              <i class="fas fa-lightbulb"></i>
+              Stay Tuned
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h3>Another Cool Project!</h3>
+            <p>More exciting work is on the way. Follow my GitHub for the latest updates!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- 🌿 Hobbies -->
   <section id="hobbies" class="fade-in">
@@ -326,22 +487,17 @@ footer a:hover {
     </div>
   </section>
 
-<!-- 🌿 Contact -->
-<footer id="contact" class="fade-in">
-  <h2>Contact Me</h2>
-  <p>Let’s connect!</p>
-  <p>
-    <!-- Email (mailto for mobile & default mail client) -->
-    <a href="mailto:hagonzalez@ucsd.edu">Email</a> | 
-    <!-- Optional Gmail fallback -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hagonzalez@ucsd.edu" target="_blank" title="Open in Gmail">Gmail</a> | 
-    <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">LinkedIn</a> | 
-    <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
-  </p>
-</footer>
-
-
-
+  <!-- 🌿 Contact -->
+  <footer id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <p>Let's connect!</p>
+    <p>
+      <a href="mailto:hagonzalez@ucsd.edu">Email</a> | 
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hagonzalez@ucsd.edu" target="_blank" title="Open in Gmail">Gmail</a> | 
+      <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
+    </p>
+  </footer>
 
   <!-- 🌿 JS for animations -->
   <script>
