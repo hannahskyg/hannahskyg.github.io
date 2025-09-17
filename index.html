@@ -201,6 +201,7 @@ footer a:hover {
   flex-wrap: wrap;      /* wraps on small screens */
 }
 
+/* Hover animation for profile photo */
 .profile-photo {
   width: 200px;
   height: 200px;
@@ -209,8 +210,16 @@ footer a:hover {
   object-position: top center;
   border: 3px solid #9caf88;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin: 0; /* remove auto centering since we're using flex */
+  margin: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.profile-photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
 
 .about-text {
   flex: 1;         /* text takes up remaining space */
@@ -241,13 +250,16 @@ footer a:hover {
   <!-- 🌿 About -->
 <section id="about" class="fade-in">
   <h2>About Me</h2>
-  <div class="about-container">
+<div class="about-container">
+  <a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank">
     <img src="images/pfp_hannah.jpg" alt="Hannah Gonzalez" class="profile-photo">
-    <div class="about-text">
-      <p>Hi, I’m Hannah Sky Gonzalez! I’m a third-year Data Science & International Business double major at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context. Academically, my coursework focuses on data science, business principles, and accounting. In data science, I have learned how to draw meaningful conclusions through computation, data analysis, data visualization, and data modeling. In business, I have developed essential skills to be an effective team member and future business leader. My accounting courses have taught me how to understand and interpret financial statements. Outside of academics, I am a member of three organizations: Data Science Society, Women in Business, and Women in Computing. I have also held mentorship roles, supporting students who are in similar situations to those I have experienced, which I find highly rewarding.</p>
-      <p>Outside of academics, I love traveling, enjoying matcha, and working out! I’ve been to over 15 countries, always try the newest café in town, and am on a mission to complete a pull-up!</p>
-    </div>
+  </a>
+  <div class="about-text">
+    <p>Hi, I’m Hannah Sky Gonzalez! I’m a third-year Data Science & International Business double major at UC San Diego, passionate about connecting numbers with narratives and exploring how data shapes decisions in a global context. Academically, my coursework focuses on data science, business principles, and accounting. In data science, I have learned how to draw meaningful conclusions through computation, data analysis, data visualization, and data modeling. In business, I have developed essential skills to be an effective team member and future business leader. My accounting courses have taught me how to understand and interpret financial statements. Outside of academics, I am a member of three organizations: Data Science Society, Women in Business, and Women in Computing. I have also held mentorship roles, supporting students who are in similar situations to those I have experienced, which I find highly rewarding.</p>
+    <p>Outside of academics, I love traveling, enjoying matcha, and working out! I’ve been to over 15 countries, always try the newest café in town, and am on a mission to complete a pull-up!</p>
   </div>
+</div>
+
 </section>
 
 
