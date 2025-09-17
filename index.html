@@ -271,24 +271,45 @@
       transform: none;
     }
 
-    /* 🌿 Hobbies */
-    .hobbies-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
+     /* 🌿 Polaroid Hobby Cards */
+      .hobbies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+        justify-items: center;
+      }
+      
+      .polaroid {
+        background: #fff;
+        padding: 10px 10px 15px;
+        border-radius: 6px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+        text-align: center;
+        font-family: 'Inter', sans-serif; /* handwriting style */
+        width: 180px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .polaroid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+      }
+      
+      .polaroid p {
+        margin: 8px 0 0;
+        font-size: 0.9rem;
+        color: #333;
+      }
+      
+      .polaroid:hover {
+        transform: rotate(-2deg) scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        cursor: pointer;
+      }
 
-    .hobbies-grid img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .hobbies-grid img:hover {
-      transform: scale(1.05);
-    }
 
     footer {
       text-align: center;
@@ -503,16 +524,34 @@
     </div>
   </section>
 
-  <!-- 🌿 Hobbies -->
-  <section id="hobbies" class="fade-in">
-    <h2>Hobbies</h2>
-    <div class="hobbies-grid">
+ <!-- 🌿 Hobbies -->
+<section id="hobbies" class="fade-in">
+  <h2>Hobbies</h2>
+  <div class="hobbies-grid">
+    
+    <div class="polaroid">
       <img src="images/shanghai_skyline.jpg" alt="Travel">
-      <img src="images/matcha.jpg" alt="Matcha">
-      <img src="images/sunset.jpg" alt="Sunset">
-      <img src="images/hiking.jpg" alt="Beach">
+      <p> Been to 15+ Countries!</p>
     </div>
-  </section>
+
+    <div class="polaroid">
+      <img src="images/matcha.jpg" alt="Matcha">
+      <p> Always Down for Matcha!!</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/sunset.jpg" alt="Sunset">
+      <p> Enjoying Sunsets!</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="images/hiking.jpg" alt="Hiking">
+      <p>Touching Grass Daily!</p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- 🌿 Contact -->
   <footer id="contact" class="fade-in">
