@@ -128,11 +128,14 @@
         }
       
           .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      justify-items: center;   /* centers project cards horizontally */
-    }
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+          justify-content: center;   /* centers the whole grid */
+          max-width: 1000px;         /* same as your other sections */
+          margin: 0 auto;            /* centers the grid in the page */
+        }
+        
 
         
         .project-card {
