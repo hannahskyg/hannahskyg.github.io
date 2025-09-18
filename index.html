@@ -59,6 +59,8 @@
       font-size: 15px;
     }
 
+
+
     /* 🌿 Hero */
     .hero {
       height: 100vh;
@@ -84,6 +86,8 @@
       color: #ffffff; 
     }
 
+
+
     /* 🌿 Sections */
     section {
       padding: 80px 20px;
@@ -105,6 +109,8 @@
     .resume button:hover {
       background: #9caf88;
     }
+
+
 
     /* 🌿 Resume Thumbnail */
     .resume-preview {
@@ -186,6 +192,9 @@
       overflow-y: auto;
     }
 
+
+
+
     /* 🌿 Front Card Styles */
     .flip-card-front h3 {
       font-size: 1.4rem;
@@ -236,6 +245,9 @@
         display: flex;
       }
     }
+
+
+
 
     /* 🌿 Back Card Styles */
     .flip-card-back h3 {
@@ -306,6 +318,10 @@
       transform: none;
     }
 
+
+
+
+
 /* 🌿 Close button cards */
 .close-btn {
   position: absolute;
@@ -375,6 +391,9 @@
       }
 
 
+
+
+  /* 🌿 fOOTER */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -394,6 +413,9 @@
       color: #9caf88;
     }
 
+
+
+
     /* 🌿 Animations */
     .fade-in {
       opacity: 0;
@@ -406,6 +428,8 @@
       transform: translateY(0);
     }
 
+
+
     /* 🌿 About Section Layout */
     .about-container {
       display: flex;
@@ -413,6 +437,9 @@
       gap: 20px;           
       flex-wrap: wrap;      
     }
+
+
+
 
     /* Hover animation for profile photo */
     .profile-photo {
@@ -437,6 +464,78 @@
       flex: 1;         
       min-width: 200px; 
     }
+
+
+
+
+/* 🌿 friend section */
+    .friends-section {
+  padding: 80px 20px;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.friends-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.friend-bubble {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.friend-bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-bubble:hover {
+  transform: scale(1.1);
+}
+
+.bubble-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: 600;
+}
+
+.friend-bubble:hover .bubble-overlay {
+  opacity: 1;
+}
+
+.bubble-overlay p {
+  margin: 0 0 5px;
+}
+
+.bubble-overlay i {
+  color: #0a66c2; /* LinkedIn blue */
+  font-size: 1.2rem;
+}
+
+
+
 
     /* 🌿 Mobile Responsiveness for Flip Cards */
     @media (max-width: 768px) {
@@ -628,6 +727,28 @@
       <p>Touching Grass Daily!</p>
     </div>
 
+  </div>
+</section>
+
+ <!-- 🌿 Friends! -->
+<section id="friends" class="friends-section">
+  <h2>My Friends & Network</h2>
+  <div class="friends-bubbles">
+    <a href="https://www.linkedin.com/in/di-xuan-wang/" target="_blank" class="friend-bubble">
+      <img src="images/friend1.jpg" alt="Andy Wang">
+      <div class="bubble-overlay">
+        <p>Andy W</p>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/ameli-rodriguez-garcia-965b222b0/" target="_blank" class="friend-bubble">
+      <img src="images/friend2.jpg" alt="Ameli Rodriguez Garcia">
+      <div class="bubble-overlay">
+        <p>Ameli RG</p>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </a>
+    <!-- Add more friends here -->
   </div>
 </section>
 
