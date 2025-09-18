@@ -633,49 +633,42 @@
     });
 
     // Mobile flip card functionality
-    function isMobileDevice() {
-      return window.innerWidth <= 768 || ('ontouchstart' in window);
-    }
+function isMobileDevice() {
+  return window.innerWidth <= 768 || ('ontouchstart' in window);
+}
 
-    function handleCardClick(event) {
-      // Only handle clicks on mobile
-      if (!isMobileDevice()) return;
-      
-      const card = event.currentTarget;
-      const cardInner = card.querySelector('.flip-card-inner');
-      
-      // Prevent event from bubbling up
-      event.stopPropagation();
-      
-      // Toggle the flipped state
-      cardInner.classList.toggle('flipped');
-    }
+function handleCardClick(event) {
+  if (!isMobileDevice()) return;
 
-    // Add click listeners to all flip cards
-    document.querySelectorAll('.flip-card').forEach(card => {
-      card.addEventListener('click', handleCardClick);
-      card.addEventListener('touchstart', handleCardClick, { passive: true });
+  const card = event.currentTarget;
+  const cardInner = card.querySelector('.flip-card-inner');
+  const isFlipped = cardInner.classList.contains('flipped');
+
+  // If card is already flipped, ignore clicks inside the back
+  if (isFlipped && event.target.closest('.flip-card-back')) {
+    return; // let user scroll/click links without flipping back
+  }
+
+  // Otherwise toggle flip
+  cardInner.classList.toggle('flipped');
+}
+
+// Attach only click (not touchstart, which causes double events)
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', handleCardClick);
+});
+
+// Close flipped cards when clicking outside
+document.addEventListener('click', function(event) {
+  if (!isMobileDevice()) return;
+
+  if (!event.target.closest('.flip-card')) {
+    document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
+      cardInner.classList.remove('flipped');
     });
+  }
+});
 
-    // Close flipped cards when clicking outside (mobile only)
-    document.addEventListener('click', function(event) {
-      if (!isMobileDevice()) return;
-      
-      // If the click is not on a flip card, close all flipped cards
-      if (!event.target.closest('.flip-card')) {
-        document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
-          cardInner.classList.remove('flipped');
-        });
-      }
-    });
-
-    // Handle orientation changes
-    window.addEventListener('resize', function() {
-      // Reset all flipped states when switching between desktop/mobile
-      document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
-        cardInner.classList.remove('flipped');
-      });
-    });
   </script>
 
 </body>
