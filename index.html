@@ -330,8 +330,14 @@
 @media (max-width: 768px) {
   .close-btn {
     display: block;
+    position: sticky;  /* 👈 stays visible while scrolling */
+    top: 10px;
+    right: 12px;
+    z-index: 50; /* stays above content */
+    font-size: 2rem;  /* make it easier to tap */
   }
 }
+
 
 
      /* 🌿 Polaroid Hobby Cards */
