@@ -306,6 +306,25 @@
       transform: none;
     }
 
+/* 🌿 Close button cards */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #607d8b;
+      cursor: pointer;
+      z-index: 10;
+      transition: color 0.2s;
+    }
+
+    .close-btn:hover {
+      color: #9caf88;
+  }
+
      /* 🌿 Polaroid Hobby Cards */
       .hobbies-grid {
         display: grid;
@@ -488,6 +507,7 @@
             </div>
           </div>
           <div class="flip-card-back">
+            <button class="close-btn">&times;</button>
             <h3>
               League of Legends Analysis
               <a href="https://hannahskyg.github.io/league_of_legends_analysis/" target="_blank" class="github-link">
@@ -520,6 +540,7 @@
             </div>
           </div>
           <div class="flip-card-back">
+            <button class="close-btn">&times;</button>
             <h3>
               Twitter Sentiment Analysis
               <a href="https://github.com/hannahskyg/AnalysisofTwitterSentiment" target="_blank" class="github-link">
@@ -552,6 +573,7 @@
             </div>
           </div>
           <div class="flip-card-back">
+            <button class="close-btn">&times;</button>
             <h3>
               SkyCha: Product Launch Plan
               <a href="https://www.linkedin.com/in/hannah-gonzalez123/details/projects/1738016596917/single-media-viewer/?profileId=ACoAADeh4uAB1GBEUfT_TNeu3mZoNZORvhgBFVU" target="_blank" class="github-link">
@@ -668,6 +690,19 @@ document.addEventListener('click', function(event) {
     });
   }
 });
+
+// Close button functionality
+document.querySelectorAll('.flip-card').forEach(card => {
+  const closeBtn = card.querySelector('.close-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent re-triggering flip
+      const cardInner = card.querySelector('.flip-card-inner');
+      cardInner.classList.remove('flipped');
+    });
+  }
+});
+
 
   </script>
 
