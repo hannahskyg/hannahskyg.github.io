@@ -123,16 +123,25 @@
     }
 
     /* 🌿 Experience Feed Container */
-    .experience-section {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 40px 0;
-    }
+    /* replace your .experience-section rules with these */
+  .experience-section {
+    max-width: 1000px; /* same max-width used by your other sections */
+    margin: 0 auto;
+    padding: 40px 0;
+  }
 
+.experience-section h2 {
+  text-align: left;
+  margin-bottom: 15px; /* same spacing as other headings */
+  font-weight: 600;
+  color: #333;
+}
+
+
+    /* replace your .experience-section h2 with this */
     .experience-section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.2rem;
+      text-align: left;
+      margin-bottom: 15px; /* matches the global h2 margin: 0 0 15px */
       font-weight: 600;
       color: #333;
     }
@@ -160,19 +169,15 @@
       border-bottom: 1px solid #f0f0f0;
     }
 
-    .profile-pic {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #9caf88, #607d8b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 12px;
-      font-size: 1.2rem;
-      color: white;
-      flex-shrink: 0;
-    }
+      
+  .profile-pic img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;   /* fills the circle without stretching */
+  border-radius: 50%;  /* makes it a circle */
+}
+
+
 
     .post-info {
       flex: 1;
@@ -199,34 +204,45 @@
     }
 
     /* 🌿 Post Image */
-    .post-image {
-      width: 100%;
-      height: 300px;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
+    .photo-collage {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Big photo on the left, small stack on the right */
+  gap: 10px;
+  margin: 20px 0;
+}
 
-    .post-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.big-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .post-image i {
-      font-size: 4rem;
-      color: #9caf88;
-      opacity: 0.7;
-    }
+.small-photos {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Stack the two small photos vertically */
+  gap: 10px;
+}
+
+.small-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.small-photos img:hover,
+.big-photo img:hover {
+  transform: scale(1.03);
+}
 
     /* Company specific styling */
     .post-1 .post-image { background: linear-gradient(135deg, #9caf88 20%, #a8c09a 100%); }
     .post-2 .post-image { background: linear-gradient(135deg, #607d8b 20%, #78909c 100%); }
     .post-3 .post-image { background: linear-gradient(135deg, #9caf88 20%, #a8c09a 100%); }
-    .post-4 .post-image { background: linear-gradient(135deg, #607d8b 20%, #78909c 100%); }
 
     /* 🌿 Post Actions (like/comment bar) */
     .post-actions {
@@ -808,18 +824,26 @@
     <div class="post-card post-1 fade-in">
       <div class="post-header">
         <div class="profile-pic">
-          <i class="fas fa-chart-bar"></i>
+          <img src="images/LOZO_icon.jpg" alt="LOZO Logo">
         </div>
         <div class="post-info">
           <div class="post-title">Research Assistant Intern</div>
-          <div class="post-location">LOZO @ Shanghai</div>
+          <div class="post-location">LOZO @ Shanghai, China</div>
         </div>
         <div class="post-date">Summer 2025</div>
       </div>
 
-      <div class="post-image">
-        <i class="fas fa-users-cog"></i>
-      </div>
+      <div class="photo-collage">
+        <div class="big-photo">
+          <img src="images/ssdc day 2.jpg" alt="SSDC Day 2">
+          </div>
+        <div class="small-photos">
+          <img src="images/ssdc judging.jpg" alt="SSDC Judging">
+          <img src="images/ssdc day 1.jpg" alt="SSDC Day 1">
+          </div>
+        </div>
+
+
 
       <div class="post-actions">
         <button class="action-btn like-btn" onclick="toggleLike(this)">
@@ -837,14 +861,13 @@
 
       <div class="post-caption">
         <div class="caption-text">
-          In Progress
-        </div>
+Helping empower students in the world of speech & debate 🎤📚 by boosting retention rates, testing UX for the LOZO website 💻, and diving into market research for international expansion 🌍✈️        </div>
         <div class="skills-hashtags">
-          <span class="hashtag">#In Progress</span>
-          <span class="hashtag">#In Progress</span>
-          <span class="hashtag">#In Progress</span>
-          <span class="hashtag">#In Progress</span>
-          <span class="hashtag">#In Progress</span>
+          <span class="hashtag">#UX Research</span>
+          <span class="hashtag">#Data Analytics</span>
+          <span class="hashtag">#Competitive Analysis</span>
+          <span class="hashtag">#Commumication</span>
+          <span class="hashtag">#Teamwork</span>
         </div>
         <div class="view-more" onclick="toggleComments(this)">View more details...</div>
       </div>
@@ -855,16 +878,20 @@
           Key Responsibilities & Achievements
         </div>
         <div class="comment">
-          <span class="comment-author">Impact:</span>
-          <span class="comment-text">In Progress</span>
+          <span class="comment-author">UX Testing:</span>
+          <span class="comment-text">Improved student report save functionality and reduced re-entry time for 100+ students and teachers by conducting UX
+testing across 3 user groups and creating Google UX-style authentic personas that enhanced usability and efficiency.</span>
         </div>
         <div class="comment">
-          <span class="comment-author">Growth:</span>
-          <span class="comment-text">In Progress</span>
+          <span class="comment-author">Competitive Analysis:</span>
+          <span class="comment-text">Delivered actionable competitive insights on website UI and AI speech analysis tools by analyzing 1 direct and 1 indirect
+competitor, presenting findings via Canva and Google Docs, and informing product design decisions.</span>
         </div>
         <div class="comment">
-          <span class="comment-author">Leadership:</span>
-          <span class="comment-text">In Progress</span>
+          <span class="comment-author">Engagement Analytics:</span>
+          <span class="comment-text">Increased student participation by 30% by observing 27 lessons across 8 coaches, identifying issues in note-taking strategies
+and lesson flow, and recommending curriculum adjustments—such as incorporating engaging content and refining material
+taught—that were widely adopted, showcasing ability to convert analytics into scalable business outcomes.</span>
         </div>
       </div>
     </div>
