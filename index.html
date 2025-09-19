@@ -6,7 +6,7 @@
   <title>Hannah Sky Gonzalez</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -59,8 +59,6 @@
       font-size: 15px;
     }
 
-
-
     /* 🌿 Hero */
     .hero {
       height: 100vh;
@@ -86,8 +84,6 @@
       color: #ffffff; 
     }
 
-
-
     /* 🌿 Sections */
     section {
       padding: 80px 20px;
@@ -110,8 +106,6 @@
       background: #9caf88;
     }
 
-
-
     /* 🌿 Resume Thumbnail */
     .resume-preview {
       width: 300px;           
@@ -125,6 +119,243 @@
 
     .resume-preview:hover {
       transform: scale(1.08); 
+    }
+
+    /* 🌿 Experience Feed Container */
+    .experience-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .experience-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* 🌿 Social Media Post Card */
+    .post-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    /* 🌿 Post Header (like Instagram username bar) */
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9caf88, #607d8b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      font-size: 1.2rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .post-info {
+      flex: 1;
+    }
+
+    .post-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #333;
+      margin: 0 0 2px 0;
+    }
+
+    .post-location {
+      font-size: 0.8rem;
+      color: #607d8b;
+      margin: 0;
+    }
+
+    .post-date {
+      font-size: 0.75rem;
+      color: #999;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* 🌿 Post Image */
+    .post-image {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .post-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-image i {
+      font-size: 4rem;
+      color: #9caf88;
+      opacity: 0.7;
+    }
+
+    /* Company specific styling */
+    .post-1 .post-image { background: linear-gradient(135deg, #9caf88 20%, #a8c09a 100%); }
+    .post-2 .post-image { background: linear-gradient(135deg, #607d8b 20%, #78909c 100%); }
+    .post-3 .post-image { background: linear-gradient(135deg, #9caf88 20%, #a8c09a 100%); }
+    .post-4 .post-image { background: linear-gradient(135deg, #607d8b 20%, #78909c 100%); }
+
+    /* 🌿 Post Actions (like/comment bar) */
+    .post-actions {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px 8px;
+      gap: 18px;
+    }
+
+    .action-btn {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #607d8b;
+      cursor: pointer;
+      transition: color 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .action-btn:hover {
+      color: #9caf88;
+      transform: scale(1.1);
+    }
+
+    .action-btn.liked {
+      color: #e91e63;
+    }
+
+    .action-btn span {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* 🌿 Post Caption */
+    .post-caption {
+      padding: 0 20px 15px;
+    }
+
+    .caption-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .skills-hashtags {
+      margin-top: 10px;
+    }
+
+    .hashtag {
+      color: #607d8b;
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-right: 6px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .hashtag:hover {
+      color: #9caf88;
+    }
+
+    /* 🌿 Comments Section */
+    .post-comments {
+      border-top: 1px solid #f0f0f0;
+      padding: 0 20px;
+      background: #fafbfc;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .post-comments.expanded {
+      max-height: 400px;
+      padding: 15px 20px;
+    }
+
+    .comments-header {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .comment {
+      display: flex;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .comment-author {
+      font-weight: 600;
+      color: #607d8b;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+
+    .comment-text {
+      color: #444;
+    }
+
+    /* 🌿 View More Toggle */
+    .view-more {
+      color: #607d8b;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: 8px;
+      transition: color 0.2s;
+    }
+
+    .view-more:hover {
+      color: #9caf88;
+    }
+
+    /* 🌿 Heart animation */
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .action-btn.liked {
+      animation: heartBeat 0.3s ease;
     }
 
     /* 🌿 Updated Projects Section */
@@ -192,9 +423,6 @@
       overflow-y: auto;
     }
 
-
-
-
     /* 🌿 Front Card Styles */
     .flip-card-front h3 {
       font-size: 1.4rem;
@@ -245,9 +473,6 @@
         display: flex;
       }
     }
-
-
-
 
     /* 🌿 Back Card Styles */
     .flip-card-back h3 {
@@ -305,95 +530,73 @@
       background: linear-gradient(135deg, #9caf88 0%, #a8c09a 100%); /* Sage Green */
     }
 
-    /* 🌿 Coming Soon Card */
-    .coming-soon {
-      opacity: 0.7;
+    /* 🌿 Close button cards */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #607d8b;
+      cursor: pointer;
+      z-index: 10;
+      transition: color 0.2s;
+      display: none; /* 👈 Hide by default */
     }
 
-    .coming-soon .flip-card-front {
-      background: linear-gradient(135deg, #c8d6c1 0%, #a8b9a0 100%);
+    .close-btn:hover {
+      color: #9caf88;
     }
 
-    .coming-soon:hover .flip-card-inner {
-      transform: none;
-    }
-
-
-
-
-
-/* 🌿 Close button cards */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #607d8b;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.2s;
-  display: none; /* 👈 Hide by default */
-}
-
-.close-btn:hover {
-  color: #9caf88;
-}
-
-/* Show only on mobile */
-@media (max-width: 768px) {
-  .close-btn {
-    display: block;
-  }
-}
-
-
-
-     /* 🌿 Polaroid Hobby Cards */
-      .hobbies-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 25px;
-        justify-items: center;
-      }
-      
-      .polaroid {
-        background: #fff;
-        padding: 10px 10px 15px;
-        border-radius: 6px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-        text-align: center;
-        font-family: 'Inter', sans-serif; /* handwriting style */
-        width: 180px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .polaroid img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 4px;
+    /* Show only on mobile */
+    @media (max-width: 768px) {
+      .close-btn {
         display: block;
       }
-      
-      .polaroid p {
-        margin: 8px 0 0;
-        font-size: 0.9rem;
-        color: #333;
-      }
-      
-      .polaroid:hover {
-        transform: rotate(-2deg) scale(1.05);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-        cursor: pointer;
-      }
+    }
 
+    /* 🌿 Polaroid Hobby Cards */
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+    
+    .polaroid {
+      background: #fff;
+      padding: 10px 10px 15px;
+      border-radius: 6px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      text-align: center;
+      font-family: 'Inter', sans-serif; /* handwriting style */
+      width: 180px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .polaroid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    
+    .polaroid p {
+      margin: 8px 0 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    
+    .polaroid:hover {
+      transform: rotate(-2deg) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      cursor: pointer;
+    }
 
-
-
-  /* 🌿 fOOTER */
+    /* 🌿 Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -413,9 +616,6 @@
       color: #9caf88;
     }
 
-
-
-
     /* 🌿 Animations */
     .fade-in {
       opacity: 0;
@@ -428,8 +628,6 @@
       transform: translateY(0);
     }
 
-
-
     /* 🌿 About Section Layout */
     .about-container {
       display: flex;
@@ -437,9 +635,6 @@
       gap: 20px;           
       flex-wrap: wrap;      
     }
-
-
-
 
     /* Hover animation for profile photo */
     .profile-photo {
@@ -465,66 +660,88 @@
       min-width: 200px; 
     }
 
+    /* 🌿 Friends Section */
+    .friends-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 40px auto 0;
+    }
 
+    .friend-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
+    /* Names inside the card */
+    .friend-card p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #607d8b;           /* Default blue */
+      transition: color 0.3s;    /* Smooth hover transition */
+    }
 
-/* 🌿 Friends Section */
-.friends-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  margin: 40px auto 0;
-}
+    .friend-card:hover p {
+      color: #9caf88;            /* Green on hover */
+    }
 
-.friend-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffffff;
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-  cursor: pointer;
-}
+    .friend-card i {
+      font-size: 1.2rem;
+      transition: color 0.3s;
+      color: #607d8b; /* Same as text initially */
+    }
 
-/* Names inside the card */
-.friend-card p {
-  margin: 0;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #607d8b;           /* Default blue */
-  transition: color 0.3s;    /* Smooth hover transition */
-}
+    /* Hover effect for card itself (shadow + lift) */
+    .friend-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
 
-.friend-card:hover p {
-  color: #9caf88;            /* Green on hover */
-}
+    .friend-card:hover i {
+      color: #9caf88; /* Icon color on hover */
+    }
 
-.friend-card i {
-  font-size: 1.2rem;
-  transition: color 0.3s;
-  color: #607d8b; /* Same as text initially */
-}
-
-/* Hover effect for card itself (shadow + lift) */
-.friend-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.friend-card:hover i {
-  color: #9caf88; /* Icon color on hover */
-}
-
-
-
-
-
-    /* 🌿 Mobile Responsiveness for Flip Cards */
+    /* 🌿 Mobile Responsive */
     @media (max-width: 768px) {
+      .experience-section {
+        max-width: 100%;
+        padding: 20px 0;
+      }
+
+      .post-image {
+        height: 250px;
+      }
+
+      .post-header {
+        padding: 12px 15px;
+      }
+
+      .post-actions {
+        padding: 10px 15px 6px;
+      }
+
+      .post-caption {
+        padding: 0 15px 12px;
+      }
+
+      .post-comments {
+        padding: 0 15px;
+      }
+
+      .post-comments.expanded {
+        padding: 12px 15px;
+      }
+
       .flip-card {
         height: 250px;
       }
@@ -547,6 +764,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#resume">Resume</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#hobbies">Hobbies</a>
     <a href="#contact">Contact</a>
@@ -579,6 +797,284 @@
     <a href="Hannah_Sky_Gonzalez_Resume_2025.pdf" target="_blank">
       <img src="images/resume_preview.png" alt="Resume Preview" class="resume-preview">
     </a>
+  </section>
+
+  <!-- 🌿 Experience Section -->
+  <section id="experience" class="experience-section fade-in">
+    <h2>Experience</h2>
+
+    <!-- Post 1: Data Science Society -->
+    <div class="post-card post-1 fade-in">
+      <div class="post-header">
+        <div class="profile-pic">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="post-info">
+          <div class="post-title">Marketing Committee Member</div>
+          <div class="post-location">Data Science Society @ UC San Diego</div>
+        </div>
+        <div class="post-date">Sep 2024</div>
+      </div>
+
+      <div class="post-image">
+        <i class="fas fa-users-cog"></i>
+      </div>
+
+      <div class="post-actions">
+        <button class="action-btn like-btn" onclick="toggleLike(this)">
+          <i class="far fa-heart"></i>
+          <span>47</span>
+        </button>
+        <button class="action-btn comment-btn" onclick="toggleComments(this)">
+          <i class="far fa-comment"></i>
+          <span>View details</span>
+        </button>
+        <button class="action-btn share-btn">
+          <i class="far fa-share-square"></i>
+        </button>
+      </div>
+
+      <div class="post-caption">
+        <div class="caption-text">
+          Creating engaging content and driving community growth! Loving the opportunity to connect data science students and promote amazing events 📊✨
+        </div>
+        <div class="skills-hashtags">
+          <span class="hashtag">#Marketing</span>
+          <span class="hashtag">#SocialMedia</span>
+          <span class="hashtag">#EventPlanning</span>
+          <span class="hashtag">#DataScience</span>
+          <span class="hashtag">#Community</span>
+        </div>
+        <div class="view-more" onclick="toggleComments(this)">View more details...</div>
+      </div>
+
+      <div class="post-comments">
+        <div class="comments-header">
+          <i class="fas fa-briefcase"></i>
+          Key Responsibilities & Achievements
+        </div>
+        <div class="comment">
+          <span class="comment-author">Impact:</span>
+          <span class="comment-text">Created engaging visual content and promotional materials for events with 200+ attendees</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Growth:</span>
+          <span class="comment-text">Collaborated with cross-functional teams to develop marketing strategies that increased event engagement by 30%</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Leadership:</span>
+          <span class="comment-text">Managed social media presence and coordinated outreach campaigns for workshops and networking events</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 2: Women in Computing Mentor -->
+    <div class="post-card post-2 fade-in">
+      <div class="post-header">
+        <div class="profile-pic">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="post-info">
+          <div class="post-title">Mentor</div>
+          <div class="post-location">Women in Computing @ UC San Diego</div>
+        </div>
+        <div class="post-date">Sep 2024</div>
+      </div>
+
+      <div class="post-image">
+        <i class="fas fa-handshake"></i>
+      </div>
+
+      <div class="post-actions">
+        <button class="action-btn like-btn" onclick="toggleLike(this)">
+          <i class="far fa-heart"></i>
+          <span>73</span>
+        </button>
+        <button class="action-btn comment-btn" onclick="toggleComments(this)">
+          <i class="far fa-comment"></i>
+          <span>View details</span>
+        </button>
+        <button class="action-btn share-btn">
+          <i class="far fa-share-square"></i>
+        </button>
+      </div>
+
+      <div class="post-caption">
+        <div class="caption-text">
+          So grateful to mentor amazing women in tech! Supporting the next generation of computer scientists and data scientists 💪👩‍💻
+        </div>
+        <div class="skills-hashtags">
+          <span class="hashtag">#Mentorship</span>
+          <span class="hashtag">#WomenInTech</span>
+          <span class="hashtag">#Leadership</span>
+          <span class="hashtag">#CareerDevelopment</span>
+          <span class="hashtag">#STEM</span>
+        </div>
+        <div class="view-more" onclick="toggleComments(this)">View more details...</div>
+      </div>
+
+      <div class="post-comments">
+        <div class="comments-header">
+          <i class="fas fa-graduation-cap"></i>
+          Mentorship Impact
+        </div>
+        <div class="comment">
+          <span class="comment-author">Students:</span>
+          <span class="comment-text">Mentored 5+ undergraduate students in computer science and data science career development</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Guidance:</span>
+          <span class="comment-text">Provided guidance on academic planning, internship applications, and technical skill development</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Workshops:</span>
+          <span class="comment-text">Facilitated workshops on resume building, interview preparation, and networking strategies</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Community:</span>
+          <span class="comment-text">Contributed to creating an inclusive environment that supports women in STEM fields</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 3: Research Assistant -->
+    <div class="post-card post-3 fade-in">
+      <div class="post-header">
+        <div class="profile-pic">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <div class="post-info">
+          <div class="post-title">Research Assistant</div>
+          <div class="post-location">UCSD Data Science Department</div>
+        </div>
+        <div class="post-date">Jan 2024</div>
+      </div>
+
+      <div class="post-image">
+        <i class="fas fa-flask"></i>
+      </div>
+
+      <div class="post-actions">
+        <button class="action-btn like-btn" onclick="toggleLike(this)">
+          <i class="far fa-heart"></i>
+          <span>92</span>
+        </button>
+        <button class="action-btn comment-btn" onclick="toggleComments(this)">
+          <i class="far fa-comment"></i>
+          <span>View details</span>
+        </button>
+        <button class="action-btn share-btn">
+          <i class="far fa-share-square"></i>
+        </button>
+      </div>
+
+      <div class="post-caption">
+        <div class="caption-text">
+          Deep diving into research and loving every moment! Working with amazing datasets and brilliant minds
+        </div>
+        <div class="skills-hashtags">
+          <span class="hashtag">#Research</span>
+          <span class="hashtag">#Python</span>
+          <span class="hashtag">#MachineLearning</span>
+          <span class="hashtag">#DataVisualization</span>
+          <span class="hashtag">#Statistics</span>
+        </div>
+        <div class="view-more" onclick="toggleComments(this)">View more details...</div>
+      </div>
+
+      <div class="post-comments">
+        <div class="comments-header">
+          <i class="fas fa-chart-line"></i>
+          Research Achievements
+        </div>
+        <div class="comment">
+          <span class="comment-author">Scale:</span>
+          <span class="comment-text">Conducted statistical analysis on large datasets (50,000+ records) using Python and R</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Impact:</span>
+          <span class="comment-text">Developed data visualization dashboards that improved research insight accessibility by 40%</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Collaboration:</span>
+          <span class="comment-text">Collaborated with PhD students and faculty on machine learning model development</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Publication:</span>
+          <span class="comment-text">Presented research findings at departmental seminars and contributed to academic publications</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 4: Business Analytics Intern -->
+    <div class="post-card post-4 fade-in">
+      <div class="post-header">
+        <div class="profile-pic">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="post-info">
+          <div class="post-title">Business Analytics Intern</div>
+          <div class="post-location">Tech Startup, San Diego</div>
+        </div>
+        <div class="post-date">Jun 2024</div>
+      </div>
+
+      <div class="post-image">
+        <i class="fas fa-rocket"></i>
+      </div>
+
+      <div class="post-actions">
+        <button class="action-btn like-btn" onclick="toggleLike(this)">
+          <i class="far fa-heart"></i>
+          <span>156</span>
+        </button>
+        <button class="action-btn comment-btn" onclick="toggleComments(this)">
+          <i class="far fa-comment"></i>
+          <span>View details</span>
+        </button>
+        <button class="action-btn share-btn">
+          <i class="far fa-share-square"></i>
+        </button>
+      </div>
+
+      <div class="post-caption">
+        <div class="caption-text">
+          Summer internship was incredible! Building predictive models and working directly with executives on strategic decisions
+        </div>
+        <div class="skills-hashtags">
+          <span class="hashtag">#BusinessAnalytics</span>
+          <span class="hashtag">#SQL</span>
+          <span class="hashtag">#Tableau</span>
+          <span class="hashtag">#PredictiveModeling</span>
+          <span class="hashtag">#Strategy</span>
+        </div>
+        <div class="view-more" onclick="toggleComments(this)">View more details...</div>
+      </div>
+
+      <div class="post-comments">
+        <div class="comments-header">
+          <i class="fas fa-trophy"></i>
+          Business Impact
+        </div>
+        <div class="comment">
+          <span class="comment-author">Models:</span>
+          <span class="comment-text">Built predictive models that improved customer retention forecasting accuracy by 25%</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Automation:</span>
+          <span class="comment-text">Created automated reporting systems using SQL and Tableau, saving 15 hours per week</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Analysis:</span>
+          <span class="comment-text">Analyzed customer behavior data to identify key growth opportunities and market segments</span>
+        </div>
+        <div class="comment">
+          <span class="comment-author">Executive:</span>
+          <span class="comment-text">Presented actionable insights to C-level executives, influencing strategic business decisions</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- 🌿 Projects with Flip Cards -->
@@ -716,8 +1212,7 @@
   </div>
 </section>
 
- <!-- 🌿 Friends! -->
-
+ <!-- 🌿 Friends -->
  <section id="friends" class="friends-section">
   <h2>My Friends & Network</h2>
   <div class="friends-list">
@@ -729,7 +1224,6 @@
       <p>Ameli Rodriguez Garcia</p>
       <i class="fab fa-linkedin"></i>
     </a>
-    <!-- Add more friends here -->
   </div>
 </section>
 
@@ -746,13 +1240,15 @@
     </p>
   </footer>
 
-  <!-- 🌿 JS for animations and mobile flip functionality -->
+  <!-- 🌿 JavaScript -->
   <script>
     // Fade-in animations
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
-      threshold: 0.2,
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
     };
+
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -765,56 +1261,100 @@
       appearOnScroll.observe(fader);
     });
 
+    // Social Media Post Functions
+    function toggleLike(button) {
+      const icon = button.querySelector('i');
+      const count = button.querySelector('span');
+      let currentCount = parseInt(count.textContent);
+
+      if (button.classList.contains('liked')) {
+        button.classList.remove('liked');
+        icon.className = 'far fa-heart';
+        count.textContent = currentCount - 1;
+      } else {
+        button.classList.add('liked');
+        icon.className = 'fas fa-heart';
+        count.textContent = currentCount + 1;
+      }
+    }
+
+    function toggleComments(element) {
+      const postCard = element.closest('.post-card');
+      const comments = postCard.querySelector('.post-comments');
+      const viewMoreBtn = postCard.querySelector('.view-more');
+      const commentBtn = postCard.querySelector('.comment-btn span');
+
+      if (comments.classList.contains('expanded')) {
+        comments.classList.remove('expanded');
+        if (viewMoreBtn) viewMoreBtn.textContent = 'View more details...';
+        commentBtn.textContent = 'View details';
+      } else {
+        comments.classList.add('expanded');
+        if (viewMoreBtn) viewMoreBtn.textContent = 'Show less...';
+        commentBtn.textContent = 'Hide details';
+      }
+    }
+
+    // Close comments when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.post-card')) {
+        document.querySelectorAll('.post-comments.expanded').forEach(comments => {
+          const postCard = comments.closest('.post-card');
+          const viewMoreBtn = postCard.querySelector('.view-more');
+          const commentBtn = postCard.querySelector('.comment-btn span');
+          
+          comments.classList.remove('expanded');
+          if (viewMoreBtn) viewMoreBtn.textContent = 'View more details...';
+          commentBtn.textContent = 'View details';
+        });
+      }
+    });
+
     // Mobile flip card functionality
-function isMobileDevice() {
-  return window.innerWidth <= 768 || ('ontouchstart' in window);
-}
+    function isMobileDevice() {
+      return window.innerWidth <= 768 || ('ontouchstart' in window);
+    }
 
-function handleCardClick(event) {
-  if (!isMobileDevice()) return;
+    function handleCardClick(event) {
+      if (!isMobileDevice()) return;
 
-  const card = event.currentTarget;
-  const cardInner = card.querySelector('.flip-card-inner');
-  const isFlipped = cardInner.classList.contains('flipped');
-
-  // If card is already flipped, ignore clicks inside the back
-  if (isFlipped && event.target.closest('.flip-card-back')) {
-    return; // let user scroll/click links without flipping back
-  }
-
-  // Otherwise toggle flip
-  cardInner.classList.toggle('flipped');
-}
-
-// Attach only click (not touchstart, which causes double events)
-document.querySelectorAll('.flip-card').forEach(card => {
-  card.addEventListener('click', handleCardClick);
-});
-
-// Close flipped cards when clicking outside
-document.addEventListener('click', function(event) {
-  if (!isMobileDevice()) return;
-
-  if (!event.target.closest('.flip-card')) {
-    document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
-      cardInner.classList.remove('flipped');
-    });
-  }
-});
-
-// Close button functionality
-document.querySelectorAll('.flip-card').forEach(card => {
-  const closeBtn = card.querySelector('.close-btn');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent re-triggering flip
+      const card = event.currentTarget;
       const cardInner = card.querySelector('.flip-card-inner');
-      cardInner.classList.remove('flipped');
+      const isFlipped = cardInner.classList.contains('flipped');
+
+      if (isFlipped && event.target.closest('.flip-card-back')) {
+        return;
+      }
+
+      cardInner.classList.toggle('flipped');
+    }
+
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', handleCardClick);
     });
-  }
-});
 
+    // Close flipped cards when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!isMobileDevice()) return;
 
+      if (!event.target.closest('.flip-card')) {
+        document.querySelectorAll('.flip-card-inner.flipped').forEach(cardInner => {
+          cardInner.classList.remove('flipped');
+        });
+      }
+    });
+
+    // Close button functionality
+    document.querySelectorAll('.flip-card').forEach(card => {
+      const closeBtn = card.querySelector('.close-btn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const cardInner = card.querySelector('.flip-card-inner');
+          cardInner.classList.remove('flipped');
+        });
+      }
+    });
   </script>
 
 </body>
