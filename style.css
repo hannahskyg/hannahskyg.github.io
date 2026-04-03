@@ -1,4 +1,4 @@
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --ink: #111;
       --ink2: #333;
@@ -95,7 +95,7 @@
     .cdiv { border-right: 1px solid #ccc; padding-right: var(--gap); }
 
     /* ── RULES ── */
-    .rt  { border-top: 2px solid var(--rule); padding-top: 11px; }
+    .rt  { border-top: 2px solid var(--rule); padding-top: 10px; }
     .rtt { border-top: 1px solid #ccc; padding-top: 10px; }
 
     /* ── TYPOGRAPHY ── */
@@ -277,6 +277,18 @@
 
     @keyframes tick { from { opacity: .4 } to { opacity: 1 } }
     .thinking { animation: tick .5s infinite alternate; }
+
+    /* ── PROFILE PICTURE ── */
+    .pfp-img {
+      width: 100%;
+      max-width: 270px;
+      height: 450px;
+      display: block;
+      border: 2px solid var(--ink);
+      aspect-ratio: 1;
+      object-fit: cover;
+      margin: 0 auto 14px;
+    }
 
     /* ── FOOTER ── */
     .footer {
