@@ -132,10 +132,10 @@
       letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--ink3);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
       padding: 4px 0;
       margin-bottom: 10px;
+      font-weight: bold;
     }
     .body { font-size: 13.5px; line-height: 1.75; color: var(--ink2); }
     .body p { margin-bottom: .8em; }
