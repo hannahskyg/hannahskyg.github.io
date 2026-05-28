@@ -91,7 +91,12 @@
     .c21 { display: grid; grid-template-columns: 2fr 1fr; gap: var(--gap); }
     .c12 { display: grid; grid-template-columns: 1fr 2fr; gap: var(--gap); }
     .c2  { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
-    .c3  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--gap); }
+    .c3  {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 240px));
+      justify-content: center;
+      gap: var(--gap);
+    }
     .cdiv { border-right: 1px solid #ccc; padding-right: var(--gap); }
 
     /* ── RULES ── */
@@ -196,6 +201,22 @@
     }
     .sfill.r { background: var(--red); }
     .spct { font-size: 11px; color: var(--ink3); min-width: 28px; text-align: right; }
+
+    /* ── SKILLS LIST ── */
+    .skills-list {
+      margin-top: 10px;
+      padding-left: 18px;
+
+      gap: 6px 14px;
+      font-size: 12px;
+      color: var(--ink2);
+      line-height: 1.35;
+    }
+    .skills-list li {
+      margin: 0;
+        padding: 4px 0;
+          }
+
 
     /* ── TIMELINE ── */
     .tl { border-left: 2px solid var(--ink); padding-left: 16px; }
@@ -331,4 +352,5 @@
       .c21, .c12, .c2, .c3 { grid-template-columns: 1fr; }
       .cdiv { border-right: none; border-bottom: 1px solid #ccc; padding-right: 0; padding-bottom: var(--gap); }
       .tnav { gap: 10px; }
+      .skills-list { grid-template-columns: 1fr; }
     }
