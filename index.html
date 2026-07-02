@@ -19,6 +19,7 @@
       <a onclick="nav('home')" class="active" id="n-home">Home</a>
       <a onclick="nav('projects')" id="n-projects">Projects</a>
       <a onclick="nav('resume')" id="n-resume">Resume</a>
+      <!-- <a onclick="nav('articles')" id="n-articles">Features</a> -->
       <a onclick="nav('contact')" id="n-contact">Contact</a>
       <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
     </nav>
@@ -63,7 +64,7 @@
       <!-- Sidebar -->
       <div>
         <div style="margin-bottom:14px">
-          <img src="images/hannah_gray_pfp.jpg" alt="Hannah Sky Gonzalez" class="pfp-img">
+          <img src="images/headshot_hu_2.JPG" alt="Hannah Sky Gonzalez" class="pfp-img">
         </div>
         <div class="rt">
           <div class="hed4">At a Glance</div>
@@ -379,6 +380,53 @@
     </div>
   </div>
 </div>
+  <!-- ═══════════════ ARTICLES ═══════════════ -->
+  <div class="page" id="p-articles">
+    <div style="height:13px"></div>
+    <div class="hed1" style="margin-bottom:4px">Dispatches & Field Notes</div>
+    <div class="dek">First-hand accounts, reflections, and analyses on my internships, projects, and adventures.</div>
+    <div style="border-bottom:1px solid #ccc;margin-bottom:14px"></div>
+    
+    <div class="c21">
+      <div class="cdiv">
+        <!-- Article 1 -->
+        <div style="margin-bottom:28px;">
+          <div class="rlabel" style="margin-bottom:4px">Internship Insights</div>
+          <div class="hed2" style="font-size:18px; margin-bottom:4px;">Inside the JPMorgan Chase Data Science Desk</div>
+          <div class="byl" style="margin-bottom:8px">By Hannah Sky Gonzalez · June 2026</div>
+          <div class="body">
+            <p>A look into the daily workflow of a Data Science Analyst Intern in Jersey City, building machine learning models for legal compliance and collaborating with agile teams to optimize critical financial systems.</p>
+          </div>
+          <a href="#" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);cursor:pointer;text-decoration:underline;">Read Full Story →</a>
+        </div>
+        
+        <!-- Article 2 -->
+        <div style="margin-bottom:28px; border-top:1px solid #eee; padding-top:16px;">
+          <div class="rlabel" style="margin-bottom:4px">Global Perspectives</div>
+          <div class="hed2" style="font-size:18px; margin-bottom:4px;">UX Research in Shanghai: The LOZO Experience</div>
+          <div class="byl" style="margin-bottom:8px">By Hannah Sky Gonzalez · August 2025</div>
+          <div class="body">
+            <p>From the streets of Shanghai to the conference room, I spent the summer conducting UX research and building behavioral personas for an AI educational web platform. Here's what I learned about cross-cultural product management.</p>
+          </div>
+          <a href="#" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);cursor:pointer;text-decoration:underline;">Read Full Story →</a>
+        </div>
+      </div>
+      
+      <!-- Right Col for Articles -->
+      <div style="padding-left:var(--gap); border-left:1px solid #ccc; margin-left:10px;">
+        <div class="rt">
+          <div class="hed3">Topics</div>
+          <ul style="padding-left:16px; margin-top:8px; font-size:12px; color:var(--ink3)">
+            <li style="margin-bottom:4px"><a href="#" style="color:var(--ink2); text-decoration:none;">Internships & Career (1)</a></li>
+            <li style="margin-bottom:4px"><a href="#" style="color:var(--ink2); text-decoration:none;">Global Experiences (1)</a></li>
+            <li style="margin-bottom:4px"><a href="#" style="color:var(--ink2); text-decoration:none;">Data Science Projects (0)</a></li>
+            <li style="margin-bottom:4px"><a href="#" style="color:var(--ink2); text-decoration:none;">Campus Life & Mentorship (0)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════ CONTACT ═══════════════ -->
   <div class="page" id="p-contact">
     <div style="height:13px"></div>
@@ -451,8 +499,10 @@ function nav(id) {
       volNo.textContent = 'Vol. I, No. 2';
     } else if (id === 'resume') {
       volNo.textContent = 'Vol. I, No. 3';
-    } else if (id === 'contact') {
+    } else if (id === 'articles') {
       volNo.textContent = 'Vol. I, No. 4';
+    } else if (id === 'contact') {
+      volNo.textContent = 'Vol. I, No. 5';
     }
   }
 
