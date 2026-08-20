@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Works | The Gonzalez Times</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="np">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <span>San Diego, CA</span>
+    <nav class="tnav">
+      <a href="../index.html" id="n-home">Home</a>
+      <a href="./index.html" id="n-projects">Projects</a>
+      <a href="../resume/index.html" id="n-resume">Resume</a>
+      <a href="../articles/index.html" id="n-articles">Features</a>
+      <a href="../contact/index.html" id="n-contact">Contact</a>
+      <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
+    </nav>
+  </div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="mast-eye">The Data Dispatch of Hannah Sky Gonzalez</div>
+    <div class="mast-title">The Gonzalez Times</div>
+    <div class="mast-tag">Driven by Curiosity, Built on Data</div>
+    <hr class="mast-rule">
+    <div class="mast-dl">
+      <span id="vol-no">Vol. I, No. 2</span> 
+      <span>Data Science · Machine Learning · Analytics</span>
+      <span id="hdate"></span>
+    </div>
+  </div>
+
+  <!-- PROJECTS PAGE CONTENT -->
+  <div style="height:13px"></div>
+  <div class="hed1" style="margin-bottom:4px">Recent Works</div>
+  <div class="dek">A selection of data science projects — prediction, analysis, and storytelling with data.</div>
+  
+  <!-- Filter Bar -->
+  <div style="border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding: 8px 0; margin-bottom: 14px; display: flex; gap: 12px; flex-wrap: wrap;" id="project-filters">
+    <a class="mchip on" onclick="filterProjects('all', this)" style="cursor:pointer; margin:0;">All</a>
+    <a class="mchip" onclick="filterProjects('ml', this)" style="cursor:pointer; margin:0;">Machine Learning</a>
+    <a class="mchip" onclick="filterProjects('predictive', this)" style="cursor:pointer; margin:0;">Predictive Analytics</a>
+    <a class="mchip" onclick="filterProjects('dataviz', this)" style="cursor:pointer; margin:0;">Data Visualization</a>
+    <a class="mchip" onclick="filterProjects('marketresearch', this)" style="cursor:pointer; margin:0;">Market Research</a>
+  </div>
+
+  <div class="c2" id="projects-grid">
+    <!-- Project 1 -->
+    <div class="pcard" data-type="ml">
+      <div class="rlabel">Machine Learning</div>
+      <div class="hed2">NCAA March Madness Cinderella Anomaly Detection</div>
+      <img src="../images/ncaa_basketball_trophy.jpg" alt="NCAA Anomaly Detection" style="width:100%; height:200px; object-fit:cover; object-position: center 25%; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Developed a Logistic Regression model using Scikit-learn to predict March Madness "Cinderella" upsets, achieving a 187% F1-score improvement over the baseline and 62.5% recall through SMOTE oversampling and PCA feature reduction.</p>
+        <p>Engineered a robust machine learning pipeline in Python to prevent data leakage, ensuring strict chronological evaluation across hold-out test years through StratifiedGroupKFold cross-validation.</p>
+        <p>Deployed a serverless web application on Vercel using JavaScript and HTML/CSS to visualize model diagnostics, delivering real-time predictions with zero backend latency by executing 100% client-side ML inference.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span></div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="pcard" data-type="predictive">
+      <div class="rlabel">Predictive Analytics</div>
+      <div class="hed2">Twitter Sentiment Analysis</div>
+      <img src="../images/twitter.jpeg" alt="Twitter Sentiment Analysis" style="width:100%; height:200px; object-fit:cover; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Collaborated with a team to preprocess 1.6M tweets, filter 195 college-related posts, and engineer features, enabling predictive modeling that identified a 25% increase in negative sentiment during finals week.</p>
+        <p>Built and validated predictive models using t-tests and hypothesis testing in SciPy, confirming a statistically significant correlation between high-stress periods and negative sentiment.</p>
+        <p>Created interactive visualizations in Plotly and summary statistics in Pandas to communicate sentiment trends over time.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Python</span><span class="tag">Pandas</span><span class="tag">SciPy</span></div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="pcard" data-type="ml">
+      <div class="rlabel">Machine Learning</div>
+      <div class="hed2">League of Legends Position Prediction</div>
+      <img src="../images/league_of_legends.jpg" alt="League of Legends Prediction" style="width:100%; height:200px; object-fit:cover; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Developed a Random Forest Classifier using Scikit-learn to predict player positions across 19,692 rows and 161 features, achieving 77.3% accuracy and improving baseline performance by 4%.</p>
+        <p>Applied statistical hypothesis testing and fairness analysis (p = 0.056) to validate unbiased model performance.</p>
+        <p>Executed a full end-to-end data modeling pipeline including preprocessing, EDA, and feature scaling; utilized Matplotlib to visualize relationships between variables.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">NumPy</span></div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="pcard" data-type="dataviz">
+      <div class="rlabel">Data Visualization</div>
+      <div class="hed2">Bikewatching Interactive Data Visualization</div>
+      <img src="../images/bikewatching.png" alt="Bikewatching Visualization" style="width:100%; height:200px; object-fit:cover; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Created an interactive geospatial visualization of Bluebikes traffic in Boston/Cambridge using Mapbox GL JS for the basemap and D3.js for custom overlays, integrating bike lane data and over 260,000 trip records.</p>
+        <p>Used a D3 Square Root Scale to accurately size station markers based on total traffic volume and implemented a reactive time slider for temporal data filtering.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Mapbox GL JS</span><span class="tag">D3.js</span></div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="pcard" data-type="marketresearch">
+      <div class="rlabel">Market Research</div>
+      <div class="hed2">SkyCha Product Launch Plan</div>
+      <img src="../images/SkyCha.jpg" alt="SkyCha Launch Plan" style="width:100%; height:200px; object-fit:cover; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Led the development of a product launch plan for SkyChaa, conducting comprehensive competitor and market analyses to identify opportunities and gaps.</p>
+        <p>Performed customer segmentation and target market profiling to tailor marketing strategies, and developed actionable recommendations to optimize product positioning, adoption, and overall launch success.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Market Research</span><span class="tag">Strategy</span></div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="pcard" data-type="predictive">
+      <div class="rlabel">Predictive Analytics</div>
+      <div class="hed2">San Diego MTS Predictive Modeling</div>
+      <img src="../images/mts_trolley.jpg" alt="MTS Predictive Modeling" style="width:100%; height:200px; object-fit:cover; margin:8px 0; border:1px solid var(--ink);">
+      <div class="body" style="font-size:12px">
+        <p>Developed predictive models for San Diego's MTS system to forecast bus wait times using historical data, improving insights into service efficiency.</p>
+        <p>Created comprehensive visualizations, including a county-wide map of all bus lines, to communicate patterns and support data-driven planning for transit operations.</p>
+      </div>
+      <div style="margin-top:7px"><span class="tag hi">Predictive Modeling</span><span class="tag">Visualization</span></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>© <span id="fyear"></span> Hannah Sky Gonzalez</span>
+    <span>All Data Reserved</span>
+    <span>Vol. I · San Diego, CA</span>
+  </div>
+
+</div>
+<script src="../global.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get In Touch | The Gonzalez Times</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="np">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <span>San Diego, CA</span>
+    <nav class="tnav">
+      <a href="../index.html" id="n-home">Home</a>
+      <a href="../projects/index.html" id="n-projects">Projects</a>
+      <a href="../resume/index.html" id="n-resume">Resume</a>
+      <a href="../articles/index.html" id="n-articles">Features</a>
+      <a href="./index.html" id="n-contact">Contact</a>
+      <a href="https://github.com/hannahskyg" target="_blank">GitHub</a>
+    </nav>
+  </div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="mast-eye">The Data Dispatch of Hannah Sky Gonzalez</div>
+    <div class="mast-title">The Gonzalez Times</div>
+    <div class="mast-tag">Driven by Curiosity, Built on Data</div>
+    <hr class="mast-rule">
+    <div class="mast-dl">
+      <span id="vol-no">Vol. I, No. 5</span> 
+      <span>Data Science · Machine Learning · Analytics</span>
+      <span id="hdate"></span>
+    </div>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <div style="height:13px"></div>
+  <div class="hed1" style="margin-bottom:4px">Get In Touch</div>
+  <div class="dek">For collaborations, project inquiries, or conversations about data science and global business.</div>
+  <div style="border-bottom:1px solid #ccc;margin-bottom:14px"></div>
+  <div class="c2">
+    <div>
+      <div class="hed3">Send a Message</div>
+      <form style="margin-top:13px; margin-bottom: 24px;" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Your message has been sent.');">
+        <input type="text" placeholder="Name" class="cfield" required>
+        <input type="email" placeholder="Email" class="cfield" required>
+        <textarea placeholder="Message" class="cfield" rows="4" required></textarea>
+        <button type="submit" class="cbtn" style="margin-top: 8px;">Submit</button>
+      </form>
+    </div>
+    <div>
+      <div class="hed3">Direct Links</div>
+      <div style="margin-top:13px">
+        <div class="gstat"><span style="font-size:13px;font-weight:600">LinkedIn</span><span style="font-size:12px"><a href="https://www.linkedin.com/in/hannah-gonzalez123/" target="_blank" style="color:var(--red);text-decoration:none">linkedin.com/in/hannah-gonzalez123</a></span></div>
+        <div class="gstat"><span style="font-size:13px;font-weight:600">GitHub</span><span style="font-size:12px"><a href="https://github.com/hannahskyg" target="_blank" style="color:var(--red);text-decoration:none">github.com/hannahskyg</a></span></div>
+        <div class="gstat"><span style="font-size:13px;font-weight:600">Instagram</span><span style="font-size:12px"><a href="https://www.instagram.com/hannahsky.g/" target="_blank" style="color:var(--red);text-decoration:none">@hannahsky.g</a></span></div>
+      </div>
+      
+      <div class="hed3" style="margin-top:24px">My Friends & Network</div>
+      <div style="margin-top:13px">
+        <div class="gstat"><span style="font-size:13px;font-weight:600"><a href="https://www.linkedin.com/in/di-xuan-wang/" target="_blank" style="color:var(--red);text-decoration:none">Andy(Di Xuan) Wang</a></span><span style="font-size:12px;color:var(--ink3)">SWE at Microsoft, CS at UCLA</span></div>
+        <div class="gstat"><span style="font-size:13px;font-weight:600"><a href="https://www.linkedin.com/in/ameli-rodriguez-garcia-965b222b0/" target="_blank" style="color:var(--red);text-decoration:none">Ameli Rodriguez Garcia</a></span><span style="font-size:12px;color:var(--ink3)">Future Attorney, CogSci at UCSD</span></div>
+        <div class="gstat"><span style="font-size:13px;font-weight:600"><a href="https://www.linkedin.com/in/janie-chan-b50532256/" target="_blank" style="color:var(--red);text-decoration:none">Janie Chan</a></span><span style="font-size:12px;color:var(--ink3)">Future Data Scientist, DS at UCSD</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>© <span id="fyear"></span> Hannah Sky Gonzalez</span>
+    <span>All Data Reserved</span>
+    <span>Vol. I · San Diego, CA</span>
+  </div>
+
+</div>
+<script src="../global.js"></script>
+</body>
+</html>
