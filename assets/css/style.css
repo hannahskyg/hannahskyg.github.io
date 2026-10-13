@@ -85,6 +85,10 @@
 
     /* ── GRIDS ── */
     .c21 { display: grid; grid-template-columns: 2fr 1fr; gap: var(--gap); }
+    .resume-flow { display: block; }
+    .resume-main { border-right: none; padding-right: 0; }
+    .resume-flow .resume-skills { padding-left: 0; margin-top: 24px; }
+    .resume-education { margin-bottom: 20px; }
     .c12 { display: grid; grid-template-columns: 1fr 2fr; gap: var(--gap); }
     .c2  { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
     .c3  {
@@ -180,21 +184,24 @@
 }
 
 .tag:not(:last-child)::after {
-  content: '·';
-  margin: 0 4px;
+  content: ',';
+  margin: 0 4px 0 0;
   color: var(--ink3);
 }
 
 .project-skills {
   margin-top: 7px;
+  margin-left: 16px;
   color: var(--ink2);
   font-size: 12px;
   font-weight: bold;
+  display: list-item;
+  list-style-position: outside;
 }
 
     /* ── SKILL BARS ── */
     .srow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .sname { font-size: 12px; min-width: 128px; color: var(--ink2); }
+    .sname { font-size: 12px; min-width: 128px; color: var(--ink2); font-weight: bold; }
     .strack { flex: 1; height: 5px; background: #ddd; position: relative; overflow: hidden; }
     .sfill {
       position: absolute;
@@ -265,6 +272,23 @@
       text-underline-offset: 2px;
     }
     .project-link:hover { color: var(--ink); }
+       .resume-project-website {
+         color: var(--red);
+         font-size: 13px;
+         font-weight: bold;
+         text-decoration: underline;
+         text-underline-offset: 2px;
+       }
+       .resume-project-website:hover { color: var(--ink); }
+       .project-title-row {
+         display: flex;
+         align-items: baseline;
+         gap: 12px;
+       }
+       .project-title-row .resume-project-website {
+         margin-left: auto;
+         flex-shrink: 0;
+       }
 
     /* ── AD BLOCK ── */
     .adblk { border: 1px solid #ccc; padding: 12px; text-align: center; margin-top: 12px; }
