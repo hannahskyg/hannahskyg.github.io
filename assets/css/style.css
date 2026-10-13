@@ -144,7 +144,7 @@
     
  .pq-container {
   border: none;        /* Ensures no lines appear */
-  padding: 10px 20px;  /* Adds some breathing room */
+   padding: 10px 8px;   /* Keeps longer quotes from wrapping too early */
   margin: 12px 0;      /* Separates it more from the paragraphs */
 }
 
@@ -152,7 +152,7 @@
   display: inline;
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: clamp(13px, 1.7vw, 15px);
   line-height: 1.4;
 }
 
@@ -166,6 +166,7 @@
   font-style: normal;
   font-size: 15px;
   color: var(--ink3); /* Optional: makes it a subtle grey */
+  white-space: nowrap;
 }
 
     .rlabel { font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--red); font-weight: 600; margin-bottom: 3px; }
