@@ -185,6 +185,13 @@
   color: var(--ink3);
 }
 
+.project-skills {
+  margin-top: 7px;
+  color: var(--ink2);
+  font-size: 12px;
+  font-weight: bold;
+}
+
     /* ── SKILL BARS ── */
     .srow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .sname { font-size: 12px; min-width: 128px; color: var(--ink2); }
@@ -246,6 +253,18 @@
 
     /* ── PROJECT CARDS ── */
     .pcard { padding-top: 10px; margin-bottom: 18px; }
+    .project-link {
+      display: inline-block;
+      margin-top: 9px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .project-link:hover { color: var(--ink); }
 
     /* ── AD BLOCK ── */
     .adblk { border: 1px solid #ccc; padding: 12px; text-align: center; margin-top: 12px; }
