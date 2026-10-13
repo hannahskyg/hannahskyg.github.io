@@ -45,10 +45,10 @@
     <div class="c2">
       <div>
         <div class="hed3">Send a Message</div>
-        <form style="margin-top:13px; margin-bottom: 24px;" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Your message has been sent.');">
-          <input type="text" placeholder="Name" class="cfield" required>
-          <input type="email" placeholder="Email" class="cfield" required>
-          <textarea placeholder="Message" class="cfield" rows="4" required></textarea>
+        <form action="mailto:jackham2005@gmail.com?subject=Portfolio%20Contact" method="post" enctype="text/plain" style="margin-top:13px; margin-bottom: 24px;">
+          <input type="text" name="Name" placeholder="Name" class="cfield" required>
+          <input type="email" name="Email" placeholder="Email" class="cfield" required>
+          <textarea name="Message" placeholder="Message" class="cfield" rows="4" required></textarea>
           <button type="submit" class="cbtn" style="margin-top: 8px;">Submit</button>
         </form>
       </div>
